@@ -22,27 +22,26 @@
 </structure>
 
 <groundstate 
-xctype="LSDAPerdew-Wang" 
-rgkmax="6" 
+xctype="LDA_PZ"
+rgkmax="4" 
 gmaxvr="20"
 ngridk="2 2 1"
 epsengy="1d-6"
 epspot="1d-6"
 do="fromscratch"
-lmaxmat="10"
-lmaxapw="10" 
-lmaxvr="10"
+lmaxmat="8"
+lmaxapw="8" 
+lmaxvr="8"
 lorecommendation="false"
 maxscl="100"
 nosym="false"
 fracinr="2d-2"
 mixer="msec"
 ValenceRelativity="none"
-CoreRelativity="sameasvalence"
+CoreRelativity="none"
 usesirius="true"   
 >
 <solver type="Lapack" epsarpack="1d-15" evaltol="1d-14" />
 
 </groundstate>
-<structureoptimization/> 
 </input>
