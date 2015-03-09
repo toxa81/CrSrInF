@@ -11,18 +11,18 @@
   nat=256, ntyp=4,
   ibrav=0, celldm(1)=1.88972687000
   ecutwfc = 40.0, ecutrho = 300.0,
-  occupations = 'smearing', smearing = 'm-v', degauss = 0.03, nbnd = 720
+  occupations = 'smearing', smearing = 'gauss', degauss = 0.03, nbnd = 720
 /
 &electrons
-        conv_thr = 1.0e-5,
+        conv_thr = 1.0e-11,
         electron_maxstep = 100
 /
 
 ATOMIC_SPECIES
-La   138.91 La.UPF
-Zr    91.22 Zr.UPF
-O     16.00 O.UPF
-Li     6.94 Li.UPF
+La   138.91 la_lda_v1.uspp.F.UPF
+Zr    91.22 zr_lda_v1.uspp.F.UPF
+O     16.00 o_lda_v1.2.uspp.F.UPF
+Li     6.94 li_lda_v1.uspp.F.UPF
 
 CELL_PARAMETERS
   12.9827000000	   0.0000000000	   0.0000000000
@@ -288,4 +288,4 @@ Li	   1.2450409300	   3.9960750600	  12.0336646300
 Li	   7.7363909300	   2.4952749400	   0.9490353700
 
 K_POINTS {automatic}
-2 2 2 0 0 0
+3 3 3 1 1 1
