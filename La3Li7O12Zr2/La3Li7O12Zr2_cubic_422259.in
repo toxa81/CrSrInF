@@ -11,10 +11,11 @@
   nat=256, ntyp=4,
   ibrav=0, celldm(1)=1.88972687000
   ecutwfc = 40.0, ecutrho = 300.0,
-  occupations = 'smearing', smearing = 'gauss', degauss = 0.03, nbnd = 720
+  occupations = 'smearing', smearing = 'gauss', degauss = 0.05, nbnd = 720
 /
 &electrons
         conv_thr = 1.0e-11,
+        mixing_beta = 0.5,
         electron_maxstep = 100
 /
 
