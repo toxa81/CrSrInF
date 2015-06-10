@@ -4,11 +4,12 @@ restart_mode='from_scratch',
 pseudo_dir = './',
 outdir='./',
 prefix = 'scf_',
-disk_io = 'none'
+disk_io = 'none',
+use_sirius=.false.
 /
 &system
 ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 400,
-occupations = 'smearing', smearing = 'gauss', degauss = 0.01,
+occupations = 'smearing', smearing = 'gauss', degauss = 0.01
 nat=144 ntyp=2
 /
 &electrons
