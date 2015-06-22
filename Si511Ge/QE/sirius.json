@@ -17,7 +17,6 @@
 
     "iterative_solver" : {
         "tolerance" : 1e-5,
-        "extra_tolerance" : 1e-5,
         "num_steps" : 4,
         "subspace_size" : 4,
         "type" : "davidson",
