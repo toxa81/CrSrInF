@@ -1,35 +1,38 @@
 {
     "cyclic_block_size" : 32,
     "processing_unit" : "cpu",
-    "std_evp_solver_type" : "scalapack",
-    "gen_evp_solver_type" : "scalapack",
-
-    "num_fv_states" : 192,
-
+    "std_evp_solver_type" : "lapack",
+    "gen_evp_solver_type" : "lapack",
     "electronic_structure_method" : "ultrasoft_pseudopotential",
+    
+    "fft_mode" : "serial",
+    
+    "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
 
     "iterative_solver" : {
-        "tolerance" : 1e-5,
-        "extra_tolerance" : 1,
-        "num_steps" : 5,
-        "subspace_size" : 5,
-        "version" : 1
+        "tolerance" : 1e-10,
+        "num_steps" : 20,
+        "subspace_size" : 4,
+        "type" : "davidson",
+        "converge_by_energy" : 1
     },
-
-    "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
     
-    "gk_cutoff" : 6.4,
-    "pw_cutoff" : 17.4,
+    "smearing_width" : 0.025,
     
-    "energy_tol" : 1e-8,
+    "use_symmetry" : 1,
     
-    "num_dft_iter" : 2,
+    "num_mag_dims" : 0,
     
-    "mpi_grid_dims" : [8, 2, 2],
+    "gk_cutoff" : 6.33,
+    "pw_cutoff" : 17.33,
+    
+    "energy_tol" : 1e-10,
+    
+    "num_dft_iter" : 1,
     
     "ngridk" : [2, 2, 2],
 
-    "mixer" : {
+    "#mixer" : {
         "beta" : 0.95,
         "gamma" : 0.5,
         "type" : "broyden",
@@ -47,7 +50,7 @@
         ],
         "atom_files" : {
             "Si" : "si_lda_v1.uspp.F.UPF.json",
-            "Ge" : "ge_lda_v1.uspp.F.UPF.json"
+            "Ge" : "ge_lda_v1.4.uspp.F.UPF.json"
         },
         "atoms" : {
             "Ge" : [
