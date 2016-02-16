@@ -5,11 +5,9 @@
     "std_evp_solver_type" : "lapack",
     "gen_evp_solver_type" : "lapack",
     
-    "mpi_grid_dims" : [1, 1, 1],
-    
-    "auto_rmt" : 1,
+    "auto_rmt" : 0,
 
-    "num_mag_dims" : 0,
+    "num_mag_dims" : 1,
 
     "num_dft_iter" : 1,
 
@@ -22,15 +20,15 @@
     "aw_cutoff" : 3,
     
     "lmax_apw" : 8,
-    "lmax_pot" : 7,
-    "lmax_rho" : 7,
+    "lmax_pot" : 8,
+    "lmax_rho" : 8,
 
     "potential_tol" : 1e-8,
     "energy_tol" : 1e-8,
     
     "mixer" : {
         "beta" : 0.8,
-        "type" : "broyden2",
+        "type" : "broyden1",
         "max_history" : 8
     },
     
