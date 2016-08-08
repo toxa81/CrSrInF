@@ -1,36 +1,44 @@
 {
-    "cyclic_block_size" : 16,
-    "processing_unit" : "gpu",
-    "std_evp_solver_type" : "lapack",
-    "gen_evp_solver_type" : "magma",
-    
-    "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PW"],
+    "control" : {
+        "cyclic_block_size" : 16,
+        "processing_unit" : "cpu",
+        "std_evp_solver_type" : "lapack",
+        "gen_evp_solver_type" : "lapack"
+    },
 
-    "num_fv_states" : 900,
+    "parameters" : {
+        "electronic_structure_method" : "full_potential_lapwlo",
 
-    "aw_cutoff" : 7.0,
-    "pw_cutoff" : 16.00,
-    
-    "energy_tol" : 1e-5,
-    
-    "smearing_width" : 0.001,
-    
-    "lmax_apw" : 8,
-    "lmax_pot" : 8,
-    "lmax_rho" : 8,
-    
-    "num_dft_iter" : 40,
-    
-    "ngridk" : [2, 2, 2],
-    
-    "auto_rmt" : 1,
-    "num_mag_dims" : 1,
-    
-    "use_symmetry": 1,
+        "num_fv_states" : 1000,
 
+        "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
+
+        "smearing_width" : 0.025,
+
+        "use_symmetry" : 1,
+
+        "num_mag_dims" : 0,
+
+        "auto_rmt" : 1,
+        
+        "aw_cutoff" : 7.0,
+        "pw_cutoff" : 16.00,
+
+        "energy_tol" : 1e-8,
+        "potential_tol" : 1e-8,
+
+        "num_dft_iter" : 1,
+
+        "ngridk" : [1,1,1],
+
+        "lmax_apw" : 8,
+        "lmax_pot" : 8,
+        "lmax_rho" : 8
+    },
+    
     "mixer" : {
         "beta" : 0.5,
-        "type" : "broyden1",
+        "type" : "broyden2",
         "max_history" : 8
     },
 
