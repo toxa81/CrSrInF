@@ -1,7 +1,7 @@
 {
     "control" : {
         "cyclic_block_size" : 16,
-        "processing_unit" : "cpu",
+        "processing_unit" : "gpu",
         "std_evp_solver_type" : "lapack",
         "gen_evp_solver_type" : "lapack"
     },
@@ -17,12 +17,12 @@
 
         "use_symmetry" : 1,
 
-        "num_mag_dims" : 0,
+        "num_mag_dims" : 1,
 
         "auto_rmt" : 1,
         
-        "aw_cutoff" : 7.0,
-        "pw_cutoff" : 16.00,
+        "aw_cutoff" : 3.0,
+        "pw_cutoff" : 10.00,
 
         "energy_tol" : 1e-8,
         "potential_tol" : 1e-8,
@@ -31,9 +31,9 @@
 
         "ngridk" : [1,1,1],
 
-        "lmax_apw" : 8,
-        "lmax_pot" : 8,
-        "lmax_rho" : 8
+        "lmax_apw" : 6,
+        "lmax_pot" : 6,
+        "lmax_rho" : 6
     },
     
     "mixer" : {
