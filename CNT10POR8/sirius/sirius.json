@@ -1,32 +1,47 @@
 {
-    "cyclic_block_size" : 32,
-    "processing_unit" : "cpu",
-    "std_evp_solver_type" : "lapack",
-    "gen_evp_solver_type" : "lapack",
-    "num_fft_threads" : 2,
-    "num_fft_workers" : 6,
-    "# num_fv_states" : 25,
-    "electronic_structure_method" : "ultrasoft_pseudopotential",
+    "control" : {
+        "cyclic_block_size" : 32,
+        "processing_unit" : "gpu",
+        "std_evp_solver_type" : "elpa1",
+        "gen_evp_solver_type" : "elpa1",
+        "verbosity" : 2,
+        "verification" : 1,
+        "print_memory_usage" : true
+    },
+
+    "parameters" : {
+        "#num_fv_states" : 40,
+        "electronic_structure_method" : "pseudopotential",
+        
+        "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
+
+        "smearing_width" : 0.025,
+        
+        "use_symmetry" : 1,
+        
+        "num_mag_dims" : 0,
+        
+        "gk_cutoff" : 2.0,
+        "pw_cutoff" : 5.00,
+        
+        "energy_tol" : 1e-8,
+        
+        "num_dft_iter" : 1,
+        
+        "ngridk" : [1, 1, 1],
+
+        "gamma_point" : 1
+    },
 
     "iterative_solver" : {
-        "tolerance"          : 1e-4,
-        "num_steps"          : 20,
-        "subspace_size"      : 4,
-        "type"               : "davidson",
+        "energy_tolerance" : 1e-2,
+        "residual_tolerance" : 1e-4,
+        "num_steps" : 20,
+        "subspace_size" : 4,
+        "type" : "davidson",
         "converge_by_energy" : 1
     },
     
-    "use_symmetry" : 1,
-    
-    "gk_cutoff" : 5.0,
-    "pw_cutoff" : 16.00,
-    
-    "energy_tol" : 1e-10,
-    
-    "num_dft_iter" : 100,
-    
-    "ngridk" : [1, 1, 1],
-
     "mixer" : {
         "beta" : 0.5,
         "type" : "broyden1",
@@ -49,7 +64,7 @@
             "C" : "c_lda_v1.2.uspp.F.UPF.json",
             "O" : "o_lda_v1.2.uspp.F.UPF.json",
             "N" : "n_lda_v1.2.uspp.F.UPF.json",
-            "H" : "h_lda_v1.uspp.F.UPF.json"
+            "H" : "h_lda_v1.4.uspp.F.UPF.json"
         },
         "atoms" : {
             "C" : [
