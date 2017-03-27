@@ -2,18 +2,19 @@
     "control" : {
         "cyclic_block_size" : 16,
         "processing_unit" : "cpu",
-        "std_evp_solver_type" : "scalapack",
-        "gen_evp_solver_type" : "elpa1"
+        "std_evp_solver_type" : "elpa1",
+        "gen_evp_solver_type" : "elpa1",
+        "verbosity" : 1
     },
 
     "parameters" : {
-        "electronic_structure_method" : "ultrasoft_pseudopotential",
+        "electronic_structure_method" : "pseudopotential",
 
         "xc_functionals" : ["XC_LDA_X", "XC_LDA_C_PZ"],
 
         "smearing_width" : 0.025,
 
-        "use_symmetry" : 1,
+        "use_symmetry" : true,
 
         "num_mag_dims" : 0,
         
@@ -23,9 +24,9 @@
         "energy_tol" : 1e-8,
         "potential_tol" : 1e-8,
 
-        "num_dft_iter" : 3,
+        "num_dft_iter" : 100,
 
-        "gamma_point" : 0,
+        "gamma_point" : true,
 
         "ngridk" : [1, 1, 1]
     },
@@ -33,7 +34,7 @@
     "iterative_solver" : {
         "energy_tolerance" : 1e-2,
         "residual_tolerance" : 1e-6,
-        "num_steps" : 12,
+        "num_steps" : 20,
         "subspace_size" : 4,
         "type" : "davidson",
         "converge_by_energy" : 1
