@@ -10,9 +10,9 @@ verbosity = 'high',
 wf_collect = false
 /
 &system
-ibrav=0, celldm(1)=1, ecutwfc=50, ecutrho = 300,
+ibrav=0, celldm(1)=1, ecutwfc=30, ecutrho = 300,
 occupations = 'smearing', smearing = 'gauss', degauss = 0.001,
-nat=8 ntyp=2,nbnd=240
+nat=8 ntyp=2
 /
 &electrons
 conv_thr =  1.0d-11,
@@ -41,5 +41,5 @@ Si          0.75000000         0.75000000         0.25000000
 Si          0.75000000         0.25000000         0.75000000
 Si          0.25000000         0.75000000         0.75000000
 Si          0.25000000         0.25000000         0.25000000
-K_POINTS (gamma)
-1 1 1  0 0 0
+K_POINTS (automatic)
+2 2 2  0 0 0

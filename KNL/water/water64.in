@@ -18,7 +18,7 @@ nat = 192
 ntyp = 2
 ecutwfc = 80.0
 ecutfock = 90.0
-input_dft = 'pbe0'
+!input_dft = 'pbe0'
 /
 &electrons
 diago_thr_init=5.0d-4
