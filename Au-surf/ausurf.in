@@ -8,6 +8,7 @@
   pseudo_dir = './'
   outdir = './'
   disk_io = 'none'
+  wf_collect=.false.
 /
 
 &SYSTEM
@@ -18,19 +19,20 @@
   nat = 112,
   ntyp = 1,
   nbnd = 800, 
-  ecutwfc = 40.0,
-  ecutrho = 300.0,
-  occupations='smearing', smearing='gauss', degauss=0.05
+  ecutwfc = 25.0,
+  ecutrho = 200.0,
+  occupations='smearing', smearing='marzari-vanderbilt', degauss=0.05
 /
 
 &ELECTRONS
-    electron_maxstep = 100
+    diagonalization='david'
+    electron_maxstep = 2
     mixing_beta = 0.7
 /
 
 
 ATOMIC_SPECIES
- AU  196.96 au_lda_v1.uspp.F.UPF
+ AU  196.96  Au.pbe-nd-van.UPF  
 
 K_POINTS (automatic)
 2 2 1 1 1 0
