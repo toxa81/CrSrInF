@@ -1,9 +1,9 @@
 {
     "control" : {
-        "cyclic_block_size" : 16,
-        "processing_unit" : "cpu",
-        "std_evp_solver_type" : "elpa1",
-        "gen_evp_solver_type" : "elpa1",
+        "cyclic_block_size" : 64,
+        "!processing_unit" : "cpu",
+        "std_evp_solver_type" : "magma",
+        "gen_evp_solver_type" : "magma",
         "verbosity" : 1
     },
 
@@ -18,10 +18,10 @@
 
         "num_mag_dims" : 0,
         
-        "gk_cutoff" : 6.6,
-        "pw_cutoff" : 17.4,
+        "gk_cutoff" : 6.33,
+        "pw_cutoff" : 24.5,
 
-        "energy_tol" : 1e-8,
+        "energy_tol" : 1e-6,
         "density_tol" : 1e-8,
 
         "num_dft_iter" : 100,
@@ -33,6 +33,7 @@
 
     "iterative_solver" : {
         "energy_tolerance" : 1e-2,
+        "empty_states_tolerance" : 1e-5,
         "residual_tolerance" : 1e-6,
         "num_steps" : 20,
         "subspace_size" : 4,
@@ -41,9 +42,12 @@
     },
     
     "mixer" : {
-        "beta" : 0.95,
+        "beta" : 0.5,
         "type" : "broyden1",
         "max_history" : 8
+    },
+    "settings" : {
+        "itsol_tol_scale" : [0.001, 1]
     },
 
     "unit_cell" : {
