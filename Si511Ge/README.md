@@ -1,6 +1,6 @@
 **Ground state calculation of Si_{1-x}Ge_{x} supercell containing 512 atoms**
 
-The calculations were done on 16 nodes of Piz Daint hybrid and multi-core partitions. 
+The calculations were done on 16 nodes of Piz Daint hybrid and multi-core partitions. The nodes of Piz Daint are:
 
 |Hybrid partition (Cray XC50)                | Multicore partition (Cray XC40)                  |
 |--------------------------------------------|--------------------------------------------------|
