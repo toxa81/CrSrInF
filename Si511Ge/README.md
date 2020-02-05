@@ -4,7 +4,7 @@ The calculations were done on 16 nodes of Piz Daint hybrid and multi-core partit
 
 |Hybrid partition (Cray XC50)                | Multicore partition (Cray XC40)                  |
 |--------------------------------------------|--------------------------------------------------|
-|Intel Xeon E5-2690 v3 @2.60GHz, 12 cores <br> NVIDIA Tesla P100 16GB | Two Intel Xeon E5-2695 v4 @2.10GHz (2 x 18 cores)|                                                  
+|Intel Xeon E5-2690 v3 @2.60GHz, 12 cores <br> NVIDIA Tesla P100 16GB | Two Intel Xeon E5-2695 v4 @2.10GHz (2 x 18 cores)|
 
 Native QE run: 6m34.25s
 
